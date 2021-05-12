@@ -127,6 +127,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\0.1.png" />
+    <Content Include="Content\album1.jpg" />
     <Content Include="Content\arte.jpg" />
     <Content Include="Content\d1.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -136,6 +138,8 @@
     <Content Include="Content\hhh.jpg" />
     <Content Include="Content\d2.jpg" />
     <Content Include="Content\Kate.jpg" />
+    <Content Include="Content\log.jpg" />
+    <Content Include="Content\Martin Garrix - Pressure %28feat. Tove Lo%29.mp3" />
     <Content Include="Content\mujer-trabajando.jpg" />
     <Content Include="Content\spoliler.jpg" />
     <Content Include="Content\The last of us.png" />
@@ -168,9 +172,11 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\Sign.cshtml" />
+    <Content Include="Views\Home\News.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -19,12 +19,14 @@
                     <span class="icon-bar"></span>
                 </button>
                 @Html.ActionLink("Revela.Me", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Feed", "", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Iniciar sesión", "Login", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Registrarme", "Sign", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Noticias de Revela.Me", "News", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Soporte", "Contact", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
                 </ul>
             </div>
         </div>
