@@ -9,14 +9,14 @@
     border-radius: 6px 6px 6px 6px;
     bottom: 220px;
     right: auto;
-    margin-left: +980px;
+    margin-left: +1040px;
     padding: 30px 0 0;
     position: fixed;
     text-align: center;
-    width: 240px;
+    width: 190px;
     z-index: 15;">
-    <img src="~/Content/album1.jpg" width="200" height="200"<br><br><br>
-    <font face="Didot" </font><p class="lead">Canción del mes</p>
+    <img src="~/Content/album1.jpg" width="150" height="150"<br><br><br>
+    <p class="lead">Canción del mes</p>
 </div>
 
 <div class="jumbotron">
@@ -24,13 +24,12 @@
         <font size="200"<p>Iniciar sesión</p></font>
     </font>
     <div>
-        <form class="form">
+        <form class="form" method="post">
             <font face="Didot" </font><p class="lead">Usuario:</p>
-            <input type="text" size="60" maxlength="60" value="" name="user"><br><br><br>
+            <input type="text" size="60" maxlength="60" value="" name="user" required><br><br><br>
             <font face="Didot" </font><p class="lead">Contraseña:</p>
-            <input type="text" size="60" maxlength="60" value="" name="pass"><br><br><br>
-
-            <p><a href="" class="btn btn-primary btn-lg">Iniciar sesión &raquo;</a></p>
+            <input type="text" size="60" maxlength="60" value="" name="pass" required><br><br><br>
+            <button class="btn btn-primary" type="submit">Iniciar sesión</button>
         </form>
     </div><br><br>
 
