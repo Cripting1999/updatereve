@@ -34,12 +34,34 @@ namespace Revela.Me.Controllers
         [HttpGet]
         public ActionResult Dash()
         {
+
+            if (TempData["x1"] != null)
+            {
+                ViewBag.Msg2 = TempData["x1"].ToString();
+            }
+            
+            if (TempData["x2"] != null)
+            {
+                ViewBag.Msg3 = TempData["x2"].ToString();
+            }
+
+            if (TempData["x3"] != null)
+            {
+                ViewBag.Msg4 = TempData["x3"].ToString();
+            }
+
+            if (TempData["x4"] != null)
+            {
+                ViewBag.Msg5 = TempData["x4"].ToString();
+            }
+
             return View();
         }
 
         [HttpPost]
-        public ActionResult Dash(string user, string mxn, string pass)
+        public ActionResult Dash(string user, string mxn, string card)
         {
+            //int money = int.Parse(mxn);
             return View();
         }
 
@@ -69,7 +91,16 @@ namespace Revela.Me.Controllers
                 string name = leer["nomb"].ToString();
                 string userb = leer["user"].ToString();
                 string aged = leer["age"].ToString();
+                string mai= leer["mail"].ToString();
+                TempData["x1"] = name;
+                TempData["x2"] = user;
+                TempData["x3"] = aged;
+                TempData["x4"] = mai;
                 return RedirectToAction("Dash");
+            }
+            else
+            {
+                ViewBag.Msg = "¡Oh no, el usuario no ha sido encontrado!";
             }
             conexion.Close();
             return View();
@@ -98,11 +129,12 @@ namespace Revela.Me.Controllers
         }
 
         [HttpPost]
-        public ActionResult Sign(string name, string user, string age, string card, string pass)
+        public ActionResult Sign(string name, string user, string age, string mail, string pass)
         {
            add cc = new add();
-           cc.Registro(name,user,age,card,pass);
-           return View("Login");
+           cc.Registro(name,user,age,mail,pass);
+            ViewBag.Msg1 = "¡Hola, registrado con éxito!";  
+            return View();
         }
 
 

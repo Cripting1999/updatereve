@@ -167,7 +167,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\0.1.png" />
-    <Content Include="Content\album1.jpg" />
     <Content Include="Content\arte.jpg" />
     <Content Include="Content\d1.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -177,8 +176,6 @@
     <Content Include="Content\hhh.jpg" />
     <Content Include="Content\d2.jpg" />
     <Content Include="Content\Kate.jpg" />
-    <Content Include="Content\log.jpg" />
-    <Content Include="Content\Martin Garrix - Pressure %28feat. Tove Lo%29.mp3" />
     <Content Include="Content\mujer-trabajando.jpg" />
     <Content Include="Content\spoliler.jpg" />
     <Content Include="Content\The last of us.png" />
