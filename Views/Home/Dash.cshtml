@@ -19,26 +19,32 @@
 
 
 
-        <font face="Brush Script MT">
-            <font size="200"<p>Publicar archivo</p></font>
-        </font>
-        <div>
-            <form class="form" method="post">
-                <font face="Didot" </font><p class="lead">Introduzca su usuario:</p>
-                <input type="text" size="60" maxlength="60" value="" name="user" required pattern="[a-zA-Z0-9]{1,15}" title="Usuario no valido"><br><br>
-                <font face="Didot" </font><p class="lead">Cantidad deseada (MXN):</p>
-                <input type="text" size="60" maxlength="60" value="" name="money" required pattern="[0-9]{1,15}" title="La cantidad debe ser en números"><br><br>
-                <font face="Didot" </font><p class="lead">Num. de tarjeta:</p>
-                <input type="text" size="60" maxlength="60" value="" name="card" required pattern="[0-9]{11}" title="La cuenta debe contener 11 dígitos numéricos"><br><br>
-                <font face="Didot" </font><p class="lead">Archivo:</p>
-                <input type="file" id="file" name="avatar" required accept="image/png, image/jpeg"><br><br>
-                <button class="btn btn-primary" type="submit">Publicar</button>
-            </form>
-        </div><br><br>
+<font face="Brush Script MT">
+    <font size="200"<p>Publicar archivo</p></font>
+</font>
+<div>
+    <form class="form" method="post" enctype="multipart/form-data">
+        <font face="Didot" </font><p class="lead">Introduzca su usuario:</p>
+        <input type="text" size="60" maxlength="60" value="" name="user" required pattern="[a-zA-Z0-9]{1,15}" title="Usuario no valido"><br><br>
+        <font face="Didot" </font><p class="lead">Cantidad deseada (MXN):</p>
+        <input type="text" size="60" maxlength="60" value="" name="money" required pattern="[0-9]{1,15}" title="La cantidad debe ser en números"><br><br>
+        <font face="Didot" </font><p class="lead">Num. de tarjeta:</p>
+        <input type="text" size="60" maxlength="60" value="" name="card" required pattern="[0-9]{11}" title="La cuenta debe contener 11 dígitos numéricos"><br><br>
+        <font face="Didot" </font><p class="lead">Descripción:</p>
+        <input type="text" size="60" maxlength="60" value="" name="desc" required><br><br>
+        <font face="Didot" </font><p class="lead">Archivo:</p>
+        <input type="file" id="file" name="avatar" required accept="image/png, image/jpeg"><br><br>
+        <button class="btn btn-primary" type="submit">Publicar</button>
+    </form>
+</div>
+<br>
+<br>
 
 
-        <font face="Didot" </font><p class="lead">Publica contenido sobre tu responsabilidad, no publiques contenido que no estes dispuest(a) a mostrar, la empresa no se hace responsable del mal uso de la plataforma.</p>
-        <font face="Didot" </font><p class="lead">Consulte nuestro acuerdo de confidencialidad y normas:</p><br>
-        <p><a href="" class="btn btn-primary btn-lg">Acuerdo y normas &raquo;</a></p>
+<font face="Didot" </font><p class="lead">Por seguridad al publicar el archivo se te enviara a la ventana de Feed y tu sesión expirará, vuelve a iniciar sesion si requieres volver a subir archivo.</p>
+<font face="Didot" </font><p class="lead">Publica contenido sobre tu responsabilidad, no publiques contenido que no estes dispuest(a) a mostrar, la empresa no se hace responsable del mal uso de la plataforma.</p>
+<font face="Didot" </font><p class="lead">Consulte nuestro acuerdo de confidencialidad y normas:</p>
+<br>
+<p><a href="" class="btn btn-primary btn-lg">Acuerdo y normas &raquo;</a></p>
 
 

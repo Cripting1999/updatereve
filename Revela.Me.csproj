@@ -215,6 +215,7 @@
     <Content Include="Views\Home\Sign.cshtml" />
     <Content Include="Views\Home\News.cshtml" />
     <Content Include="Views\Home\Dash.cshtml" />
+    <Content Include="Views\Home\Feed.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

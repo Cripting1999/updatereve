@@ -1,16 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Google.Protobuf.WellKnownTypes;
 using MySql.Data.MySqlClient;
 using Revela.Me.Controllers;
 
 
 namespace Revela.Me.Controllers
 {
+
+
+    
     public class HomeController : Controller
     {
+        
+
+
         public ActionResult Index()
         {
             return View();
@@ -29,7 +37,7 @@ namespace Revela.Me.Controllers
 
 
 
-
+       
 
         [HttpGet]
         public ActionResult Dash()
@@ -38,31 +46,41 @@ namespace Revela.Me.Controllers
             if (TempData["x1"] != null)
             {
                 ViewBag.Msg2 = TempData["x1"].ToString();
+                
             }
             
             if (TempData["x2"] != null)
             {
                 ViewBag.Msg3 = TempData["x2"].ToString();
+                
             }
 
             if (TempData["x3"] != null)
             {
                 ViewBag.Msg4 = TempData["x3"].ToString();
+                
             }
 
             if (TempData["x4"] != null)
             {
                 ViewBag.Msg5 = TempData["x4"].ToString();
+               
             }
 
             return View();
         }
 
         [HttpPost]
-        public ActionResult Dash(string user, string mxn, string card)
+        public ActionResult Dash(string user, string money, string card, string desc, HttpPostedFileBase avatar )
         {
-            //int money = int.Parse(mxn);
-            return View();
+            int mone = int.Parse(money);
+            var length = avatar.InputStream.Length;
+            MemoryStream target = new MemoryStream();
+            avatar.InputStream.CopyTo(target);
+            byte[] data = target.ToArray();
+            add cc = new add();
+            cc.RegistroFeed(user,mone,card,desc, data);
+            return View("Feed");
         }
 
 
@@ -156,6 +174,14 @@ namespace Revela.Me.Controllers
 
 
         public ActionResult News()
+        {
+            return View();
+        }
+
+
+
+
+        public ActionResult Feed()
         {
             return View();
         }
